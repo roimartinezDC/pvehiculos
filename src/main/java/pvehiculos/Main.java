@@ -17,7 +17,7 @@ public class Main {
     static MongoClient mongo = new MongoClient("localhost", 27017);
     static MongoDatabase test = mongo.getDatabase("test");
     static MongoCollection<Document> vendasMongo = test.getCollection("vendas");
-    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("$objectdb/db/vehicli.odb");
+    static EntityManagerFactory emf = Persistence.createEntityManagerFactory("./db/vehicli.odb");
     static EntityManager emOdb = emf.createEntityManager();
     static Connection conPsql;
     static {
